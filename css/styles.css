@@ -10136,3 +10136,8 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+
+.resume-date{
+  white-space: nowrap;
+}
