@@ -10141,3 +10141,26 @@ section.resume-section .resume-section-content {
 .resume-date{
   white-space: nowrap;
 }
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-text {
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: bold; /* Make text bold */
+  color: #333; /* Darken text color */
+  margin-top: 5px; /* Adjust margin as needed */
+  text-align: center; /* Center text horizontally */
+}
+
+.list-inline-item {
+  margin-right: 20px; /* Adjust margin between icons */
+}
+
+.devicon-typescript-plain.colored {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
