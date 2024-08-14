@@ -92,3 +92,102 @@ I created my static website based on a template
 ![image](assets/img/bucket-upload.PNG)
 
 ![image](assets/img/bucket-upload-2.PNG)
+
+## Cloudfront
+
+1. Go to CloudFront resource by navigating through the search bar.
+
+![image](assets/img/cloudfront-1.webp)
+
+2. Click on “Create distribution” button.
+
+![image](assets/img/cloudfront-2.webp)
+
+3. Select your s3 bucket domain in “Origin Domain” section.
+
+![image](assets/img/cloudfront-3.PNG)
+
+4. “Create new OAC” after selected “Origin access control settings (recommended)” in “Origin access” section.
+    - Origin type could be “S3”.
+
+![image](assets/img/cloudfront-4.PNG)
+
+5. In Viewer protocol policy select “HTTPS only”.
+
+![image](assets/img/cloudfront-5.PNG)
+
+6. Scroll down to “Cache key and origin requests” and set next values.
+
+![image](assets/img/cloudfront-6.PNG)
+
+7. In my case I turn off WAF (Web Application Firewall) to save money
+
+![image](assets/img/cloudfront-7.PNG)
+
+8. Add /index.html to “Default root Object” field and click create distribution.
+
+![image](assets/img/cloudfront-8.PNG)
+
+9. When the distribution is created, you may receive a notification stating that The S3 bucket policy needs to be updated. In this case, click on the “Copy policies” button and add the copied policies to your S3 bucket’s policies.
+
+![image](assets/img/cloudfront-9.PNG)
+
+10. Open the S3 bucket you created earlier and navigate to the “Permissions” tab. Scroll down to the “Bucket Policies” section and click on the “Edit” button.
+    - Paste your policies and click on “Save changes”
+
+![image](assets/img/s3-bucket-policy.PNG)
+
+![image](assets/img/s3-bucket-policy-2.PNG)
+
+11. Go to your CloudFront distribution “Error pages” tab and create error responses for 403 and 404.
+
+![image](assets/img/cloudfront-10.PNG)
+
+![image](assets/img/cloudfront-11.PNG)
+
+12. Back in the General tab, under Details section you can see a Distribution domain name, you can now copy and paste that link into your browser to see your website
+
+![image](assets/img/cloudfront-12.PNG)
+
+![image](assets/img/cloudfront-13.PNG)
+
+## SSL Certificate
+
+1. Navigate to AWS Certificate Manager (ACM) and select request
+    - Click on “Next” and proceed to fill your domain name
+
+![image](assets/img/SSL-1.PNG)
+
+![image](assets/img/SSL-2.PNG)
+
+2. In this case, I am requesting a wildcard certificate
+    - A SSL/TLS Wildcard certificate is a single certificate with a wildcard character (*) in the domain name field. This allows the certificate to secure multiple sub domain names (hosts) pertaining to the same base domain.
+    - For example, a wildcard certificate for *.(domainname).com, could be used for www.(domainname).com, mail.(domainname).com, store.(domainname).com, in addition to any additional sub domain name in the (domainname).com.
+
+![image](assets/img/SSL-3.PNG)
+
+3. For the validation method, I am using email validation because it is easier for me
+
+![image](assets/img/SSL-4.PNG)
+
+4. “Request” button to get your certificate
+    - In my case I received an email to verify the SSL certificate
+    - After awhile you should see the status changed to Issued
+
+![image](assets/img/SSL-5.PNG)
+
+5. Navigate back to your Cloudfront distribution to add the SSL certificate and alternate domain name (CNAME) record under general tab, section settings, and select edit
+    - Add the alternate domain name you like
+    - Add the SSL certificate
+    - Select save changes
+
+![image](assets/img/SSL-6.PNG)
+
+![image](assets/img/SSL-7.PNG)
+
+6. You should see that your cloudfront distribution settings updated with the new alternate domain names and custom ssl certificate
+
+![image](assets/img/SSL-8.PNG)
+
+
+
