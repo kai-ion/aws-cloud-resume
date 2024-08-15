@@ -189,5 +189,58 @@ I created my static website based on a template
 
 ![image](assets/img/SSL-8.PNG)
 
+## Route53 DNS management
+
+1. Setup Route 53, Amazon’s DNS service
+
+2. If you purchased the domain on NameCheap, you would have to set up and configure the necessary Name Server (NS) records on the NameCheap side
+    - By seamlessly integrating Route 53 with Namecheap, we can efficiently manage our DNS settings and ensure proper routing of traffic to our hosted resources.
+
+3. To begin, navigate to the Route 53 service in your AWS console and click on “Create hosted zone”. This will initiate the process of setting up a hosted zone where you can manage the DNS records for your domain.
+
+![image](assets/img/DNS-1.webp)
+
+4. Enter your domain name in the “Domain Name” field and click on “Create hosted zone”
+
+![image](assets/img/DNS-2.webp)
+
+5. To configure NS records in Namecheap, you need to copy the NS records from your hosted zone in Route 53 and update the DNS settings in your Namecheap account by replacing the existing NS records with the ones obtained from Route 53
+
+![image](assets/img/DNS-3.webp)
+
+6. Back in your NameCheap portal, in the “Domain List” section, click on “Manage” located on the right side, opposite to your domain.
+
+![image](assets/img/DNS-4.webp)
+
+7. In the “Nameservers” section of the Namecheap DNS management interface, select the option for custom DNS and enter your NS records.
+    - Don’t forget to save your records click on green mark
+    - We can verify this later using a website like dnschecker to confirm the correctness of the NS record configuration.
+
+![image](assets/img/DNS-5.webp)
+
+![image](assets/img/DNS-6.webp)
+
+![image](assets/img/DNS-7.webp)
+
+8. Next step is to create an A record in our hosted zone. Navigate to the hosted zone section in Route53 to proceed
+
+![image](assets/img/DNS-8.webp)
+
+9. Click on “Create Record”.
+    - Input subdomain name if you have one
+    - Record type is — A. Set Alias toggle, and select your distribution that you created above from the search field.
+    - Click on “Create Record”.
+
+![image](assets/img/DNS-9.webp)
+
+10. Your website should be able to be reached at the record name, for my case it would be at cloudresume.piguit.com
+
+11. You can add additional subdomains that points to this A record, for example you may want to enable www.cloudresume.piguit.com
+    - Remember to add the additional certificate for each additional subdomains you want to your cloud distribution, with AWS ACM, you can add multiple certificates in one request
+    - This step will take some time to load
+
+![image](assets/img/DNS-10.webp)
+
+
 
 
