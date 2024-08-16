@@ -267,6 +267,16 @@ I created my static website based on a template
 
 ## DynamoDB
 
+1. Navigate to AWS Console and into DynamoDB services, select “Create Table”
+
+2. Input a table name, then set the partition key to id. Then create table
+
+3. Once the table is created, navigate to actions and explore items
+    - Then select create item
+
+4. Add a new item with attribute of numbers and name it views, and assign it a value of 1
+
+
 ## AWS Lambda_Function
 
 ## AWS Lambda_function connection
