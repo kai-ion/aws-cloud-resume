@@ -27,12 +27,12 @@ What is Cloud Resume Challenge? - [The Cloud Resume Challenge](https://cloudresu
 - [S3 Bucket](#s3-bucket)
 - [Cloundfront](#cloudfront)
 - [SSL Certificate](#ssl-certificate)
-- [Route53 DNS Management]()
-- [Javascript - Visitor Counter]()
-- [DynamoDB]()
-- [AWS Lambda Function]()
-- [AWS Lambda Function connection]()
-- [Git and CI/CD]()
+- [Route53 DNS Management](#route53-dns-management)
+- [Javascript - Visitor Counter](#javascript---visitor-counter)
+- [DynamoDB](#dynamodb)
+- [AWS Lambda Function](#aws-lambda_function)
+- [AWS Lambda Function connection](#aws-lambda_function-connection)
+- [Git and CI/CD](#git-and-cicd)
 
 <br>
 
@@ -240,6 +240,18 @@ I created my static website based on a template
     - This step will take some time to load
 
 ![image](assets/img/DNS-10.webp)
+
+## Javascript - Visitor counter
+
+## DynamoDB
+
+## AWS Lambda_Function
+
+## AWS Lambda_function connection
+
+## Git and CI/CD
+
+# Thats all, You’re all set up!
 
 
 
