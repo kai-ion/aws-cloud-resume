@@ -243,6 +243,28 @@ I created my static website based on a template
 
 ## Javascript - Visitor counter
 
+![image](assets/img/visitor-counter-home.PNG)
+
+1. To set up a visitors counter, we need four things:
+    - Javascript code to display the counter
+    - Javascript API call to fetch the data from AWS DynamoDB
+    - AWS Lambda function to update the table on DynamoDB
+
+
+2. First create a script.js file in your website repository, and add the script to fetch data from aws and display it 
+    - Leave the fetch url blank for now until we create the lambda function on aws
+
+![image](assets/img/javascript-visitor-counter-1.PNG)
+
+3. Add a reference to your scripts.js in your index.html file
+
+![image](assets/img/javascript-visitor-counter-2.PNG)
+
+4. Display the data in your html
+
+![image](assets/img/javascript-visitor-counter-3.PNG)
+
+
 ## DynamoDB
 
 ## AWS Lambda_Function
