@@ -269,15 +269,68 @@ I created my static website based on a template
 
 1. Navigate to AWS Console and into DynamoDB services, select “Create Table”
 
+![image](assets/img/visitor-counter-2.PNG)
+
+![image](assets/img/visitor-counter-3.PNG)
+
 2. Input a table name, then set the partition key to id. Then create table
+
+![image](assets/img/visitor-counter-4.PNG)
 
 3. Once the table is created, navigate to actions and explore items
     - Then select create item
 
+![image](assets/img/visitor-counter-4.5.PNG)
+
+![image](assets/img/visitor-counter-5.PNG)
+
+
 4. Add a new item with attribute of numbers and name it views, and assign it a value of 1
+
+![image](assets/img/visitor-counter-6.PNG)
 
 
 ## AWS Lambda_Function
+
+1. Navigate to AWS Console and into Lambda Services, then select create a function
+
+![image](assets/img/Lambda-1.PNG)
+
+2. In the new window, give your lambda function a name, I named mine cloudresume-api
+
+3. Then set the default execution role to “Create a new role”
+
+![image](assets/img/Lambda-2.PNG)
+
+4. In the advanced settings, Check in Enable function URL so the function can be accessed via a URL and set auth type to NONE allowing everyone access to the function. Then check in Configure cross-origin resource sharing
+
+5. Then select create function
+
+![image](assets/img/Lambda-3.PNG)
+
+6. In the newly created function, you will be able to see a Function URL, which after you navigate to on your browser, you can see Hello from lambda displayed
+
+![image](assets/img/Lambda-4.PNG)
+
+![image](assets/img/Lambda-5.PNG)
+
+7. Now we edit the code in the lambda function to display our view count
+
+    - You can copy and paste my code from: https://github.com/kai-ion/aws-cloud-resume/blob/main/Lambda-function/lambda_function.py
+
+    - Remember to set the correct table name and the table item Ids
+
+![image](assets/img/Lambda-6.PNG)
+
+8. Test if there is any bug with ur function and then select Deploy 
+
+9. You should be able to view the visitor count in the aforementioned lambda URL
+
+![image](assets/img/Lambda-7.PNG)
+
+10. Now we can add this function url to our JS code in the previous step
+
+![image](assets/img/visitor-counter-1.PNG)
 
 ## AWS Lambda_function connection
 
