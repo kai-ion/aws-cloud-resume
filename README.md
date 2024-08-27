@@ -334,7 +334,41 @@ I created my static website based on a template
 
 ## AWS Lambda_function connection
 
+1. Setup lambda function to get the records from dynamoDB, go to the function and navigate to the configuration tab and then the permission tab
+
+![image](assets/img/Lambda-permission-2.PNG)
+
+2. Click on the role under Role name to open an IAM window, then click add permissions under permissions tab, and select attach policy
+
+![image](assets/img/Lambda-permission-1.PNG)
+
+3. In the search bar, look up dynamoDB, then add the policy needed. In my case I added full access permission
+
+![image](assets/img/Lambda-permission-3.PNG)
+
+
 ## Git and CI/CD
+
+1. Create a github repo and upload all the website files to the repo
+
+2. Now we have to setup github actions by creating a directory called .github/workflows
+
+    - Inside of it, we will create a file called front-end-cicd.yml
+
+![image](assets/img/CICD-1.PNG)
+
+3. You can paste my code: [link](https://github.com/kai-ion/aws-cloud-resume/blob/main/.github/workflows/front-end-cicd.yml)
+
+    - In the code, we use the steps checkout and sync from github actions and jakejarvis to checkout from github and sync it to our aws s3 bucket
+
+4. After you push the new codes onto github, you have to setup your secrets or access keys to your aws profile
+    - Log onto aws and set up a new user and give it the access type you want
+    - Keep note of the keys
+
+5. Next we go back to github and add the keys in secrets and variables in settings
+    - Now the build should be successful and your repo and s3 bucket should be sync up
+
+![image](assets/img/CICD-2.PNG)
 
 # Thats all, You’re all set up!
 
