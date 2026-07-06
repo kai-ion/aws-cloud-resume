@@ -118,55 +118,59 @@
               <h2 class="mb-5"><i class="fas fa-briefcase"></i> Experience</h2>
     
               <div
-                class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
+                class=”resume-item d-flex flex-column flex-md-row justify-content-between mb-5”
               >
-                <div class="resume-content">
-                  <h3 class="mb-0">Software Engineer</h3>
-                  
-                  <div class="subheading mb-3">Conatix Corp. | Remote, USA</div>
+                <div class=”resume-content”>
+                  <h3 class=”mb-0”>Software Engineer</h3>
+                  <div class=”subheading mb-3”>Amazon, AWS | NY, USA</div>
                   <ul>
-                    <li>
-                      Collaborated closely with the lead engineer to construct and train a state-of-the-art neural network model for
-                      malware detection, achieving an impressive accuracy rate of 91% in identifying malicious software
-                    </li>
-                    <li>Built a highly efficient reverse engineering software prototype by incorporating NSA's open source framework,
-                      Ghidra, leading to a remarkable increase in productivity by 30% and a reduction in development time by 20%</li>
-                    <li>
-                      Developed a comprehensive malware dashboard using Python, Flask, & Docker, leveraging data analysis libraries
-                      to dynamically display information, resulting in enhanced data visualization and actionable insights
-                    </li>
-                    <li>Efficiently deployed and scaled the prototype malware software on AWS EC2, reducing response time by 40% for
-                      user testing with 500+ concurrent users
-                      </li>
-                    <li>
-                      Contributed to the development and maintenance of the company website with full integration of Stripe
-                    </li>
-                    <li>
-                      Secured website with Cloudflare and DNS records with GoDaddy, achieving a 99.9% uptime
-                    </li>
-                    <li>
-                      Ongoing development, documentation and maintenance of standard
-                      “run book” procedures for Cloud Operations
-                    </li>
-                    <li>
-                      Budget and Cost monitoring/management of Cloud environments
-                    </li>
-                    <li>
-                      Ongoing review of services (existing and emerging) and tools
-                      to improve efficiency and/or reduce cost of Cloud Operations
-                    </li>
-                    <li>
-                      Advise development and DevOps group on suggested improvements,
-                      enhancements or procedural changes based on operational
-                      experience
-                    </li>
+                    <li>Designed and implemented a Smithy-based code generation framework to replace legacy service modeling, enabling migration across 420+ services and reducing manual SDK integration effort by ~40%</li>
+                    <li>Delivered a #2 most requested customer feature of service-specific custom endpoints, increasing adoption of private endpoints by 33%</li>
+                    <li>Deployed a CloudFormation Step Functions pipeline that automatically builds the SDK across Linux, Windows, and macOS; cut build validation time by 60%, increased cross-platform test coverage from 75% to 93%</li>
+                    <li>Integrated bidirectional streaming with Amazon Bedrock's Nova Sonic model, enabling real-time multimodal interactions; decreased end-to-end response latency by 40%</li>
                   </ul>
                 </div>
-                <div class="resume-date text-md-right">
-                  <span class="text-primary">July 2022 - Present</span>
+                <div class=”resume-date text-md-right”>
+                  <span class=”text-primary”>June 2025 - Present</span>
+                </div>
+              </div>
+
+              <div
+                class=”resume-item d-flex flex-column flex-md-row justify-content-between mb-5”
+              >
+                <div class=”resume-content”>
+                  <h3 class=”mb-0”>Software Engineer</h3>
+                  <div class=”subheading mb-3”>Capital One | Richmond, VA</div>
+                  <ul>
+                    <li>Designed and maintained an in-house CloudFront-style service using Lua and NGINX, securing and routing millions of internal API requests per day across production services</li>
+                    <li>Tested and optimized 50+ AWS Lambda functions, improving execution efficiency by 30%</li>
+                    <li>Created an automation service that allows 3000+ internal teams to onboard their apps onto static cloud</li>
+                    <li>Served as on-call engineer for the API Gateway service, resolving 100+ support tickets and triaging production incidents with a median response time under 5 minutes</li>
+                  </ul>
+                </div>
+                <div class=”resume-date text-md-right”>
+                  <span class=”text-primary”>Oct 2024 - June 2025</span>
+                </div>
+              </div>
+
+              <div
+                class=”resume-item d-flex flex-column flex-md-row justify-content-between mb-5”
+              >
+                <div class=”resume-content”>
+                  <h3 class=”mb-0”>Senior Software Engineer</h3>
+                  <div class=”subheading mb-3”>Conatix Corp. | Remote, USA</div>
+                  <ul>
+                    <li>Collaborated closely with the lead engineer to construct and train a neural network model for malware detection, achieving 91% accuracy in identifying malicious software</li>
+                    <li>Efficiently deployed and scaled the prototype malware software on AWS EC2 + Docker, reducing response time by 40% for user testing with 500+ concurrent users</li>
+                  </ul>
+                </div>
+                <div class=”resume-date text-md-right”>
+                  <span class=”text-primary”>July 2022 - Oct 2024</span>
                 </div>
               </div>
     
+              <!-- Previous roles commented out for brevity -->
+              <!--
               <div
                 class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
               >
@@ -242,6 +246,7 @@
                   <span class="text-primary">June 2020 - June 2021</span>
                 </div>
               </div>
+              -->
               <!-- Commented out the extra!
             <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
               <div class="resume-content">
@@ -283,7 +288,66 @@
                 class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
               >
                 <div class="resume-content">
-                  <h3 class="mb-0">J.P. Morgan Software Engineering Virtual Experience on Forage</h3>
+                  <h3 class="mb-0">Stock Intelligence Pipeline</h3>
+                  <div class="subheading mb-3">AI-Powered Daily Stock Screening &amp; Paper Trading | <a href="https://kai-ion.github.io/stock-intelligence/" target="_blank">Live</a> | <a href="https://github.com/kai-ion/stock-intelligence" target="_blank">GitHub</a></div>
+                  <ul>
+                    <li><strong>Tools:</strong> Python, AWS (EC2, Bedrock, SES, S3, EventBridge), yfinance, Jekyll, GitHub Actions</li>
+                    <li>Screens 2,700+ US stocks daily using NASDAQ API with S&P 500 priority coverage and yfinance technicals</li>
+                    <li>Claude (via AWS Bedrock) generates daily briefs with top picks, fibonacci entry/exit targets, and market direction calls</li>
+                    <li>Paper trading simulator auto-manages positions with stop losses and profit targets, tracking real P&L</li>
+                    <li>Short screener identifies bearish setups with entry/cover/stop levels validated by Claude</li>
+                    <li>Fully automated EC2 pipeline: screener → analysis → email → blog publish via GitHub Pages</li>
+                  </ul>
+                </div>
+                <div class="resume-date text-md-right">
+                  <span class="text-primary">2025 - Present</span>
+                </div>
+              </div>
+
+              <div
+                class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
+              >
+                <div class="resume-content">
+                  <h3 class="mb-0">Sports Betting Analysis</h3>
+                  <div class="subheading mb-3">AI Prop Betting Picks (NBA, WNBA, MLB) | <a href="https://kai-ion.github.io/sports-betting/" target="_blank">Live</a> | <a href="https://github.com/kai-ion/sports-betting" target="_blank">GitHub</a></div>
+                  <ul>
+                    <li><strong>Tools:</strong> Python, AWS Bedrock, ESPN API, BettingPros, Playwright, Jekyll, GitHub Actions</li>
+                    <li>Fetches player props from BettingPros + Underdog Fantasy, projects stats from ESPN game logs</li>
+                    <li>Quantitative edge scoring with Claude validation and 50/50 OVER/UNDER balance enforcement</li>
+                    <li>Smart scheduling: checks ESPN scoreboard daily, auto-skips offseason sports</li>
+                    <li>Daily email reports + automated blog publish via GitHub Pages</li>
+                  </ul>
+                </div>
+                <div class="resume-date text-md-right">
+                  <span class="text-primary">2025 - Present</span>
+                </div>
+              </div>
+
+              <div
+                class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
+              >
+                <div class="resume-content">
+                  <h3 class="mb-0">Job Application Tracker</h3>
+                  <div class="subheading mb-3">Automated Gmail → Google Sheets Pipeline | <a href="https://github.com/kai-ion/job-tracker" target="_blank">GitHub</a></div>
+                  <ul>
+                    <li><strong>Tools:</strong> Google Apps Script, Gmail API, Google Sheets, clasp CLI</li>
+                    <li>Scans Gmail every 5 minutes for application confirmations and rejection emails</li>
+                    <li>Extracts company name, role, and source (LinkedIn, Indeed, Greenhouse, Lever, etc.) using regex pattern matching</li>
+                    <li>Detects rejections in threaded replies with fuzzy company matching across multiple roles</li>
+                    <li>One-click template setup for other users; Notion database integration available</li>
+                  </ul>
+                </div>
+                <div class="resume-date text-md-right">
+                  <span class="text-primary">2025</span>
+                </div>
+              </div>
+
+              <!-- Previous projects -->
+              <div
+                class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
+              >
+                <div class="resume-content">
+                  <h3 class="mb-0">Previous: J.P. Morgan Virtual Experience</h3>
                   <div class="subheading mb-3">Dynamic Perspective Dashboard Development</div>
                   <ul>
                     <li>
