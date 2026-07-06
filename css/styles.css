@@ -10138,8 +10138,15 @@ section.resume-section .resume-section-content {
 }
 
 
-.resume-date{
+.resume-item .resume-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.resume-date {
   white-space: nowrap;
+  min-width: 150px;
+  flex-shrink: 0;
 }
 
 .icon-container {
